@@ -29,17 +29,15 @@ const Home = () => {
                 onMouseEnter={
                     () => {
                         setActive(active.map((e, idx) => {
-                            return {
-                                'isActive': idx === index,
-                            };
+                            e.isActive = idx === index;
+                            return e;
                         }))
                     }
                 }
                 onMouseLeave={() => {
                 setActive(active.map(e => {
-                    return {
-                        'isActive': true,
-                    };
+                    e.isActive = true;
+                    return e;
                 }))
                 }}
             >
