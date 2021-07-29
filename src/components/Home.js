@@ -15,17 +15,14 @@ const Home = () => {
         },
     ]);
 
-    active.forEach(e => {
-        console.log(e.isActive)
-    })
-
     return active.map(
         (e, index) => {
             return <div
+                key={index}
                 className={[
                     'Box',
-                    `${e.isActive? 'Home' : 'Away'}`
-                ].join(' ') }
+                    `${e.isActive ? 'Home' : 'Away'}`
+                ].join(' ')}
                 onMouseEnter={
                     () => {
                         setActive(active.map((e, idx) => {
@@ -35,10 +32,10 @@ const Home = () => {
                     }
                 }
                 onMouseLeave={() => {
-                setActive(active.map(e => {
-                    e.isActive = true;
-                    return e;
-                }))
+                    setActive(active.map(e => {
+                        e.isActive = true;
+                        return e;
+                    }))
                 }}
             >
                 {index}

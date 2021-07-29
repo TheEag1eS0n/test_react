@@ -1,0 +1,34 @@
+.Toggle {
+    height: 60px;
+    width: 80%;
+
+    box-shadow: 0 0 0 2px #93e2e0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.Toggle > span {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    /*box-shadow: 0 0 0 2px white;*/
+
+    color: white;
+}
+
+.Toggle > div {
+    width: 25%;
+    height: 100%;
+
+    position: absolute;
+    box-shadow: 0 0 0 2px white;
+
+    transition: left 1s;
+}
