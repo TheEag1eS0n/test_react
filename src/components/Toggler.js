@@ -10,28 +10,27 @@ const Toggle = () => {
         'от 2 млн. р.'
     ]
 
-    const [active, setActive] = useState([
-        {'selected': 0},
-    ]);
+    const [active, setActive] = useState(0);
 
-    return active.map((e) => {
-        return <div className={'Toggle'} key={1}>
-            {prices.map((price, index) => {
-                return <span key={price} onClick={
-                    () => {
-                        setActive(active.map((state) => {
-                            e.selected = index
-                            return e
-                        }))
-                    }
-                }>{price}</span>
-            })}
-            <div
-                style={
-                    {left: e.selected * 25 + '%',}
-                }/>
-        </div>
-    });
+    // return active.map((e) => {
+    // });
+
+    console.log('rerender')
+    console.log(active)
+
+    return <div className={'Toggle'} key={1}>
+        {prices.map((price, index) => {
+            return <span key={price} onClick={
+                () => {
+                    setActive(index)
+                }
+            }>{price}</span>
+        })}
+        <div
+            style={
+                {left: 25 * active + '%',}
+            }/>
+    </div>
 }
 
 export default Toggle;
