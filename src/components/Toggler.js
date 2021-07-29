@@ -16,7 +16,7 @@ const Toggle = () => {
     // });
 
     console.log('rerender')
-    console.log(active)
+    console.log(`active element_index ${active}`)
 
     return <div className={'Toggle'} key={1}>
         {prices.map((price, index) => {
